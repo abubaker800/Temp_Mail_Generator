@@ -1,16 +1,51 @@
-# React + Vite
+Temp-Mail Generator
+A modern, fast, and secure temporary email generator built with React and Tailwind CSS. This application leverages the Mail.tm API to provide users with fully functional, disposable email addresses to protect their primary inbox from spam.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✨ Features
+Instant Email Generation: Automatically generates a unique temporary email address upon page load.
 
-Currently, two official plugins are available:
+Real-time Inbox: Features an auto-polling system that checks for new messages every 5 seconds.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Message Preview: View full HTML or text content of incoming emails securely.
 
-## React Compiler
+Secure Content: Uses DOMPurify to safely render email content and prevent XSS attacks.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Modern UI: A beautiful, responsive glassmorphism design with dark mode and animated gradients.
 
-## Expanding the ESLint configuration
+One-Click Copy: Quickly copy your temporary address to the clipboard.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚀 Technologies Used
+React: Frontend framework for the user interface.
+
+Tailwind CSS: For styling and responsive design.
+
+Lucide React: For sleek, consistent iconography.
+
+Mail.tm API: Backend service for email account creation and message retrieval.
+
+DOMPurify: For sanitizing HTML email bodies.
+
+Vite: Build tool for a fast development experience.
+
+🛠️ Installation & Setup
+1:-Clone the repository:
+    Bash
+        git clone https://github.com/abubaker800/Temp-Mail-Generator.git
+        cd ghost-mail
+2:- Install dependencies:
+     Bash
+        npm install
+3:- Run the development server:
+    Bash
+        npm run dev
+          
+📖 How it Works
+The app interacts with the Mail.tm open API to:
+
+Fetch available domains.
+
+Create a randomized account with a secure password.
+
+Authenticate and retrieve a JWT token for private access to the inbox.
+
+Poll the /messages endpoint to display incoming mail in the sidebar.
